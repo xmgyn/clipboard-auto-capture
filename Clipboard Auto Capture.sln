@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Clipboard Auto Capture", "Clipboard Auto Capture.vcxproj", "{3CD6F77E-DC1E-4ECB-A4DF-C7E3152631F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Service", "Service\Service.vcxproj", "{E33B4D73-B736-4772-94F4-287A6FA28AE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{3CD6F77E-DC1E-4ECB-A4DF-C7E3152631F7}.Release|x64.Build.0 = Release|x64
 		{3CD6F77E-DC1E-4ECB-A4DF-C7E3152631F7}.Release|x86.ActiveCfg = Release|Win32
 		{3CD6F77E-DC1E-4ECB-A4DF-C7E3152631F7}.Release|x86.Build.0 = Release|Win32
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Debug|x64.ActiveCfg = Debug|x64
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Debug|x64.Build.0 = Debug|x64
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Debug|x86.ActiveCfg = Debug|Win32
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Debug|x86.Build.0 = Debug|Win32
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Release|x64.ActiveCfg = Release|x64
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Release|x64.Build.0 = Release|x64
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Release|x86.ActiveCfg = Release|Win32
+		{E33B4D73-B736-4772-94F4-287A6FA28AE3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

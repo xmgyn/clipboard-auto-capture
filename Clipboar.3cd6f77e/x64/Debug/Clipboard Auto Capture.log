@@ -1,7 +1,4 @@
 ﻿  clipboard.cpp
   main.cpp
-D:\Work\Play Projects\Clipboard Auto Capture\main.cpp(3,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  monitor.cpp
-  service.cpp
   Generating Code...
   Clipboard Auto Capture.vcxproj -> D:\Work\Play Projects\Clipboard Auto Capture\x64\Debug\Clipboard Auto Capture.exe
