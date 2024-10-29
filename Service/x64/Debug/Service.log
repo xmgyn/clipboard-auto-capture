@@ -1,7 +1,7 @@
 ﻿  main.cpp
-E:\Extras\Apps\Visual Studio IDE\VC\Tools\MSVC\14.41.34120\include\xutility(4689,18): warning C4244: '=': conversion from 'const wchar_t' to 'char', possible loss of data
+E:\Extras\Apps\VS Studio\VC\Tools\MSVC\14.41.34120\include\xutility(4689,18): warning C4244: '=': conversion from 'const wchar_t' to 'char', possible loss of data
   (compiling source file 'main.cpp')
-      E:\Extras\Apps\Visual Studio IDE\VC\Tools\MSVC\14.41.34120\include\xutility(4689,18):
+      E:\Extras\Apps\VS Studio\VC\Tools\MSVC\14.41.34120\include\xutility(4689,18):
       the template instantiation context (the oldest one first) is
           D:\Work\Play Projects\Clipboard Auto Capture\Service\main.cpp(14,27):
           see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
@@ -13,7 +13,7 @@ E:\Extras\Apps\Visual Studio IDE\VC\Tools\MSVC\14.41.34120\include\xutility(4689
           ]
               D:\Work\Play Projects\Clipboard Auto Capture\Service\main.cpp(14,60):
               see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'LogMessage'
-          E:\Extras\Apps\Visual Studio IDE\VC\Tools\MSVC\14.41.34120\include\xstring(793,17):
+          E:\Extras\Apps\VS Studio\VC\Tools\MSVC\14.41.34120\include\xstring(793,17):
           see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<const wchar_t*,const wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
           with
           [
@@ -22,7 +22,7 @@ E:\Extras\Apps\Visual Studio IDE\VC\Tools\MSVC\14.41.34120\include\xutility(4689
               _Sent=const wchar_t *,
               _Size=unsigned __int64
           ]
-          E:\Extras\Apps\Visual Studio IDE\VC\Tools\MSVC\14.41.34120\include\xstring(949,18):
+          E:\Extras\Apps\VS Studio\VC\Tools\MSVC\14.41.34120\include\xstring(949,18):
           see reference to function template instantiation '_OutIt *std::_Copy_n_unchecked4<const wchar_t*,_Size,char*>(_InIt,_SizeTy,_OutIt)' being compiled
           with
           [

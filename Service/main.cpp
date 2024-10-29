@@ -6,13 +6,7 @@
 #include <tchar.h>
 
 #define SERVICE_NAME L"ClipboardAutoService"
-#include <fstream>
 
-// Function to log messages to a file
-void LogMessage(const std::wstring& message) {
-    std::ofstream logFile("D:\\Work\\Play Projects\\Clipboard Auto Capture\\x64\\Debug\\service_log.txt", std::ios_base::app);
-    logFile << std::string(message.begin(), message.end()) << std::endl;
-}
 SERVICE_STATUS ServiceStatus = { 0 };
 SERVICE_STATUS_HANDLE hServiceStatusHandle = NULL;
 HANDLE hServiceStopEvent = INVALID_HANDLE_VALUE;
@@ -21,8 +15,6 @@ VOID WINAPI ServiceMain(DWORD argc, LPTSTR* argv);
 VOID WINAPI ServiceCtrlHandler(DWORD ctrlCode);
 
 int main() {
-    
-    
     SERVICE_TABLE_ENTRY ServiceTable[] = {
         { (LPWSTR)SERVICE_NAME, (LPSERVICE_MAIN_FUNCTION)ServiceMain },
         { NULL, NULL }
@@ -66,12 +58,8 @@ VOID WINAPI ServiceMain(DWORD argc, LPTSTR* argv) {
     si.cb = sizeof(si);
     si.wShowWindow = SW_SHOW;
     si.dwFlags = STARTF_USESHOWWINDOW;
-    CreateProcess(L"colorcpl.exe", NULL, NULL, NULL, false, CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi);
 
-    if (CreateProcess(L"notepad.exe", NULL, NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi)) {
-        DWORD error = GetLastError();
-        // Log the error code
-        LogMessage(std::to_wstring(error));
+    if (CreateProcess(L"D:\\Work\\Play Projects\\Clipboard Auto Capture\\x64\\Debug\\Clipboard Auto Capture.exe", NULL, NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi)) {
         WaitForSingleObject(pi.hProcess, INFINITE); // Wait for the process to exit
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);

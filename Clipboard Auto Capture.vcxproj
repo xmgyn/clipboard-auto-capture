@@ -111,7 +111,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Work\Play Projects\Clipboard Auto Capture\lib\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Extras\Apps\Windows Kits\10\Include;D:\Work\Play Projects\Clipboard Auto Capture\lib\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
